@@ -111,6 +111,24 @@ button:hover {
   justify-content: center;
 }
 
+.resultado-verde {
+  color: #fff;
+  border: 2px solid #14532d;
+  background-color: #2f8551;
+}
+
+.resultado-marrom {
+  color: #fff;
+  background-color: #713f12;
+  border-color: #d27320;
+}
+
+.resultado-vermelho {
+  color: #fff;
+  background-color: #7f1d1d;
+  border-color: #ff4f4f;
+}
+
 footer {
   display: flex;
   align-items: flex-end;

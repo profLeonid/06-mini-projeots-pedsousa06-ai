@@ -1,31 +1,48 @@
 'use strict'
 
-function calcularMedia() {
+function calcularIMC() {
 
     const peso = parseFloat(document.getElementById("peso").value)
     const altura = parseFloat(document.getElementById("altura").value)
-    const nome = document.getElementById('nome')
+    const nome = document.getElementById('nome').value.trim()
 
     if (isNaN(peso) || isNaN(altura)) {
-        alert("Por favor, preencha todas os espaços.")
+        alert("Por favor, preencha todos os espaços.")
         return
     }
 
-    const imc = altura * altura / peso
+    const imc = peso / (altura * altura)
 
     const resultado = document.getElementById("resultado")
 
-    resultado.classList.remove("resultado-verde", "resultado-marrom", "resultado-vermelho")
+    resultado.classList.remove(
+        "resultado-abaixo-peso",
+        "resultado-normal",
+        "resultado-sobrepeso",
+        "resultado-obesidade-1",
+        "resultado-obesidade-2",
+        "resultado-obesidade-3"
+    )
 
-    if (mediaFinal >= 7) {
-        resultado.classList.add("resultado-verde")
-        resultado.textContent = `Média: ${mediaFinal.toFixed(1)} — Aprovado`
-    } else if (mediaFinal >= 5) {
-        resultado.classList.add("resultado-marrom")
-        resultado.textContent = `Média: ${mediaFinal.toFixed(1)} — Recuperação`
+    const saudacao = nome ? `${nome}, seu IMC é ${imc.toFixed(1)}` : `Seu IMC é ${imc.toFixed(1)}`
+
+    if (imc < 18.5) {
+        resultado.classList.add("resultado-abaixo-peso")
+        resultado.textContent = `${saudacao} — Abaixo do peso`
+    } else if (imc <= 24.9) {
+        resultado.classList.add("resultado-normal")
+        resultado.textContent = `${saudacao} — Peso normal`
+    } else if (imc <= 29.9) {
+        resultado.classList.add("resultado-sobrepeso")
+        resultado.textContent = `${saudacao} — Sobrepeso`
+    } else if (imc <= 34.9) {
+        resultado.classList.add("resultado-obesidade-1")
+        resultado.textContent = `${saudacao} — Obesidade grau I`
+    } else if (imc <= 39.9) {
+        resultado.classList.add("resultado-obesidade-2")
+        resultado.textContent = `${saudacao} — Obesidade grau II`
     } else {
-        resultado.classList.add("resultado-vermelho")
-        resultado.textContent = `Média: ${mediaFinal.toFixed(1)} — Reprovado`
+        resultado.classList.add("resultado-obesidade-3")
+        resultado.textContent = `${saudacao} — Obesidade grau III`
     }
-    
 }

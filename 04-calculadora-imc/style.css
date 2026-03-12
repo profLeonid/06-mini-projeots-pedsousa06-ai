@@ -111,6 +111,42 @@ button:hover {
   justify-content: center;
 }
 
+.resultado-abaixo-peso {
+  color: #fff;
+  background-color: #1e3a5f;
+  border-color: #5998eb;
+}
+
+.resultado-normal {
+  color: #fff;
+  background-color: #14532dbf;
+  border-color: #1cf573;
+}
+
+.resultado-sobrepeso {
+  color: #fff;
+  background-color: #713f12;
+  border-color: #dd8335;
+}
+
+.resultado-obesidade-1 {
+  color: #fff;
+  background-color: #7f1d1d;
+  border-color: #f9343480;
+}
+
+.resultado-obesidade-2 {
+  color: #fff;
+  background-color: #6b0f0f;
+  border-color: #ae1515;
+}
+
+.resultado-obesidade-3 {
+  color: #fff;
+  background-color: #450a0a;
+  border-color: #ff0c0c38;
+}
+
 footer {
   display: flex;
   align-items: flex-end;

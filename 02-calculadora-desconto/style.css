@@ -100,6 +100,8 @@ button:hover {
 
 .resultado {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   min-height: 6rem;
   padding: 1.5rem;
   text-align: center;
@@ -107,6 +109,14 @@ button:hover {
   border: 1px solid #374151;
   align-items: center;
   justify-content: center;
+}
+
+.resultado p {
+  display: none;
+}
+
+.resultado.visivel p {
+  display: block;
 }
 
 footer {
@@ -120,4 +130,25 @@ footer p {
   font-size: 0.75rem;
   text-align: center;
   padding: 1rem;
+}
+
+
+.resultado-verde {
+  background-color: #14532d;
+  color: #bbf7d0;
+  border-color: #20b95e;
+}
+
+
+.resultado-marrom {
+  background-color: #713f12;
+  color: #fef3c7;
+  border-color: #ff7700;
+}
+
+
+.resultado-vermelho {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border-color: #9c1c1c;
 }

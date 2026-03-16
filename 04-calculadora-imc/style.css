@@ -101,7 +101,7 @@ button:hover {
 }
 
 .resultado {
-  display: flex;
+  display: none;
   min-height: 6rem;
   padding: 1.5rem;
   text-align: center;
@@ -109,6 +109,10 @@ button:hover {
   border: 1px solid #374151;
   align-items: center;
   justify-content: center;
+}
+
+.resultado.visivel {
+  display: flex;
 }
 
 .resultado-abaixo-peso {

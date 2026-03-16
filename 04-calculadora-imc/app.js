@@ -45,4 +45,6 @@ function calcularIMC() {
         resultado.classList.add("resultado-obesidade-3")
         resultado.textContent = `${saudacao} — Obesidade grau III`
     }
+
+    resultado.classList.add("visivel")
 }
